@@ -22,4 +22,20 @@ class TestSportsTeam < MiniTest::Test
     result = @team1.add_player("Pique")
     assert_equal("Player already exists", result)
   end
+
+  def test_add_points__win()
+    result = @team1.add_points("Win")
+    assert_equal(3, result)
+  end
+
+  def test_add_points__win()
+    result = @team1.add_points("Tie")
+    assert_equal(1, result)
+  end
+
+  def test_add_points__win()
+    result = @team1.add_points("Loss")
+    assert_equal(0, result)
+  end
+
 end

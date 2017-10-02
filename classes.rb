@@ -36,6 +36,7 @@ class SportsTeam
     @name = team_name
     @players = players
     @coach = coach
+    @points = 0
   end
 
   def change_coach(new_coach)
@@ -47,6 +48,17 @@ class SportsTeam
       return "Player already exists"
     else
       self.players.push(player_name)
+    end
+  end
+
+  def add_points(result)
+    case result
+    when "Win"
+      @points += 3
+    when "Tie"
+      @points += 1
+    when "Loss"
+      @points
     end
   end
 end

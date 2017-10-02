@@ -42,4 +42,7 @@ def change_coach(new_coach)
   self.coach = new_coach
 end
 
+def add_player(player_name)
+  self.players.push(player_name)
+end
 end

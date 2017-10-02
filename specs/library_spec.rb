@@ -29,4 +29,16 @@ class TestLibrary < MiniTest::Test
       }], result)
   end
 
+  def test_find_book_by_title()
+    result = @library.find_book_by_title("lord_of_the_rings")
+    assert_equal([
+      {
+        title: "lord_of_the_rings",
+        rental_details: {
+          student_name: "Jeff",
+          date: "01/12/16"
+        }
+      }], result)
+  end
+
 end

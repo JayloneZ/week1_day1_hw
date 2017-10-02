@@ -65,12 +65,20 @@ class SportsTeam
 end
 
 class Library
-  attr_accessor :book
+  attr_accessor :books
   def initialize(books)
     @books = books
   end
 
   def list_books()
-    @books
+    self.books
+  end
+
+  def find_book_by_title(input_title)
+    for title in @books
+      if :title == input_title
+        return title
+      end
+    end
   end
 end

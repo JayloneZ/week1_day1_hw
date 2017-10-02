@@ -29,3 +29,25 @@ class Student
     return "My favourite language is #{language}"
   end
 end
+
+class SportsTeam
+
+def initialize(team_name, players, coach)
+  @name = team_name
+  @players = players
+  @coach = coach
+end
+
+def return_name()
+  return @name
+end
+
+def return_players()
+  return @players
+end
+
+def return_coach()
+  return @coach
+end
+
+end

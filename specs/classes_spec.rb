@@ -9,6 +9,14 @@ class TestStudent < MiniTest::Test
     @student2 = Student.new("Huascar", 16)
   end
 
+  def test_return_name()
+    assert_equal("Miguel", @student1.access_name)
+  end
+
+  def test_return_cohort()
+    assert_equal(16, @student1.access_cohort)
+  end
+
   def test_name_changer()
     @student1.name_changer("Tony")
     assert_equal("Tony", @student1.access_name)
@@ -28,5 +36,7 @@ class TestStudent < MiniTest::Test
     result = @student1.say_favourite_language("Ruby")
     assert_equal("My favourite language is Ruby", result)
   end
+
+
 
 end

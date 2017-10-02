@@ -56,11 +56,11 @@ class SportsTeam
   def add_points(result)
     case result
     when "Win"
-      @points += 3
+      self.points += 3
     when "Tie"
-      @points += 1
+      self.points += 1
     when "Loss"
-      @points
+      self.points
     end
   end
 
@@ -70,7 +70,7 @@ class Library
 
   attr_accessor :books
   def initialize(books)
-    @books = books
+    self.books = books
   end
 
   def list_books()
@@ -78,7 +78,7 @@ class Library
   end
 
   def find_book_by_title(input_title)
-    for book in @books
+    for book in self.books
       if :title == input_title
         return book
       end
@@ -86,7 +86,7 @@ class Library
   end
 
   def find_rental_details_by_title(input_title)
-    for book in @books
+    for book in self.books
       if book[:title] == input_title
         return book[:rental_details]
       end
@@ -94,7 +94,7 @@ class Library
   end
 
   def add_book_by_title(input_title)
-    @books.push(
+    self.books.push(
       title: input_title,
       rental_details: {
         student_name: "",
@@ -103,7 +103,7 @@ class Library
   end
 
   def change_rental_details(input_title, renter_name, renter_date)
-    for book in @books
+    for book in self.books
       if book[:title] == input_title
         book[:rental_details][:student_name] = renter_name
         book[:rental_details][:date] = renter_date

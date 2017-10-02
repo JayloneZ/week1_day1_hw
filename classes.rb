@@ -21,8 +21,8 @@ class Student
     @cohort = input_cohort
   end
 
-  def student_talk()
-    return "I can talk!"
+  def student_talk(string)
+    return string
   end
 
   def say_favourite_language(language)

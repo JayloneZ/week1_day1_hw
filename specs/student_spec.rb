@@ -30,7 +30,7 @@ class TestStudent < MiniTest::Test
   end
 
   def test_student_talk()
-    result = @student1.student_talk()
+    result = @student1.student_talk("I can talk!")
     assert_equal("I can talk!", result)
   end
 

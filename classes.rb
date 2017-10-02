@@ -31,18 +31,22 @@ class Student
 end
 
 class SportsTeam
-attr_accessor :name, :players, :coach
-def initialize(team_name, players, coach)
-  @name = team_name
-  @players = players
-  @coach = coach
-end
+  attr_accessor :name, :players, :coach
+  def initialize(team_name, players, coach)
+    @name = team_name
+    @players = players
+    @coach = coach
+  end
 
-def change_coach(new_coach)
-  self.coach = new_coach
-end
+  def change_coach(new_coach)
+    self.coach = new_coach
+  end
 
-def add_player(player_name)
-  self.players.push(player_name)
-end
+  def add_player(player_name)
+    if self.players.include?(player_name)
+      return "Player already exists"
+    else
+      self.players.push(player_name)
+    end
+  end
 end

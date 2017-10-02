@@ -39,16 +39,5 @@ class TestStudent < MiniTest::Test
     assert_equal("My favourite language is Ruby", result)
   end
 
-  def test_change_coach()
-    result = @team1.change_coach("Tata")
-    assert_equal("Tata", result)
-  end
-
-  def test_add_players()
-    @team1.add_player("Busquets")
-    assert_equal(["Messi", "Iniesta", "Pique", "Busquets"], @team1.players)
-  end
-
-  
 
 end

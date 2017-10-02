@@ -7,6 +7,8 @@ class TestStudent < MiniTest::Test
   def setup
     @student1 = Student.new("Miguel", 16)
     @student2 = Student.new("Huascar", 16)
+
+    @team1 = SportsTeam.new("Barcelona", ["Messi", "Iniesta", "Pique"], "Valverde")
   end
 
   def test_return_name()
@@ -37,6 +39,9 @@ class TestStudent < MiniTest::Test
     assert_equal("My favourite language is Ruby", result)
   end
 
-
+  def test_change_coach()
+    result = @team1.change_coach("Tata")
+    assert_equal("Tata", result)
+  end
 
 end

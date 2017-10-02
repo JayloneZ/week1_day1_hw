@@ -31,23 +31,15 @@ class Student
 end
 
 class SportsTeam
-
+attr_accessor :name, :players, :coach
 def initialize(team_name, players, coach)
   @name = team_name
   @players = players
   @coach = coach
 end
 
-def return_name()
-  return @name
-end
-
-def return_players()
-  return @players
-end
-
-def return_coach()
-  return @coach
+def change_coach(new_coach)
+  self.coach = new_coach
 end
 
 end

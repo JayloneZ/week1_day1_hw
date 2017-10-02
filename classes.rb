@@ -93,4 +93,24 @@ class Library
     end
   end
 
+  def add_book_by_title(input_title)
+    @books.push(
+      title: input_title,
+      rental_details: {
+        student_name: "",
+        date: ""
+        })
+  end
+
+  def change_rental_details(input_title, renter_name, renter_date)
+    for book in @books
+      if book[:title] == input_title
+        book[:rental_details][:student_name] = renter_name
+        book[:rental_details][:date] = renter_date
+        return book
+      else return "this book doesn't exist in the database"
+      end
+    end
+  end
+
 end

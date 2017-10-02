@@ -11,7 +11,22 @@ class TestStudent < MiniTest::Test
 
   def test_name_changer()
     @student1.name_changer("Tony")
-    assert_equal("Tony", @student1.name)
+    assert_equal("Tony", @student1.access_name)
+  end
+
+  def test_cohort_changer()
+    @student1.cohort_changer(15)
+    assert_equal(15, @student1.access_cohort)
+  end
+
+  def test_student_talk()
+    result = @student1.student_talk()
+    assert_equal("I can talk!", result)
+  end
+
+  def test_say_favourite_language()
+    result = @student1.say_favourite_language("Ruby")
+    assert_equal("My favourite language is Ruby", result)
   end
 
 end

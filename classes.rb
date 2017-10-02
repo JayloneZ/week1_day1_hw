@@ -1,6 +1,5 @@
 class Student
 
-
   def initialize(input_name, input_cohort)
     @name = input_name
     @cohort = input_cohort
@@ -18,7 +17,15 @@ class Student
     @name = input_name
   end
 
-  def cohort_changer(student, input_cohort)
+  def cohort_changer(input_cohort)
     @cohort = input_cohort
+  end
+
+  def student_talk()
+    return "I can talk!"
+  end
+
+  def say_favourite_language(language)
+    return "My favourite language is #{language}"
   end
 end

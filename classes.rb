@@ -28,9 +28,11 @@ class Student
   def say_favourite_language(language)
     return "My favourite language is #{language}"
   end
+
 end
 
 class SportsTeam
+
   attr_accessor :name, :players, :coach
   def initialize(team_name, players, coach)
     @name = team_name
@@ -65,6 +67,7 @@ class SportsTeam
 end
 
 class Library
+
   attr_accessor :books
   def initialize(books)
     @books = books
@@ -75,10 +78,19 @@ class Library
   end
 
   def find_book_by_title(input_title)
-    for title in @books
+    for book in @books
       if :title == input_title
-        return title
+        return book
       end
     end
   end
+
+  def find_rental_details_by_title(input_title)
+    for book in @books
+      if book[:title] == input_title
+        return book[:rental_details]
+      end
+    end
+  end
+
 end

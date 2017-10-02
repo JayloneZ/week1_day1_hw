@@ -8,7 +8,6 @@ class TestStudent < MiniTest::Test
     @student1 = Student.new("Miguel", 16)
     @student2 = Student.new("Huascar", 16)
 
-    @team1 = SportsTeam.new("Barcelona", ["Messi", "Iniesta", "Pique"], "Valverde")
   end
 
   def test_return_name()

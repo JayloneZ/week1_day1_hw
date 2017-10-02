@@ -61,4 +61,16 @@ class SportsTeam
       @points
     end
   end
+
+end
+
+class Library
+  attr_accessor :book
+  def initialize(books)
+    @books = books
+  end
+
+  def list_books()
+    @books
+  end
 end

@@ -28,12 +28,12 @@ class TestSportsTeam < MiniTest::Test
     assert_equal(3, result)
   end
 
-  def test_add_points__win()
+  def test_add_points__tie()
     result = @team1.add_points("Tie")
     assert_equal(1, result)
   end
 
-  def test_add_points__win()
+  def test_add_points__loss()
     result = @team1.add_points("Loss")
     assert_equal(0, result)
   end
